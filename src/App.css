@@ -1,0 +1,151 @@
+.app-shell {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.top-bar {
+  height: 42px;
+  background: #4169e8;
+  box-shadow: 0 2px 6px rgb(22 44 108 / 14%);
+}
+
+.demo-page {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 12px 10px 40px;
+}
+
+.counter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.counter-value {
+  margin: 0 0 10px;
+  color: #555d69;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: transparent;
+  color: #535b68;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease,
+    color 140ms ease, transform 140ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid #8da7ff;
+  outline-offset: 3px;
+}
+
+.button-primary {
+  min-height: 52px;
+  border-radius: 15px;
+  padding-inline: 20px;
+  background: #292d36;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.button-primary:hover {
+  background: #3a404c;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.button-destructive {
+  color: #e87983;
+}
+
+.button-destructive:hover {
+  background: #fff1f2;
+  color: #cf5965;
+}
+
+.button-outline {
+  border-color: #e5e8ed;
+  background: #fff;
+  color: #4b5360;
+}
+
+.button-outline:hover {
+  background: #f7f8fa;
+}
+
+.button-secondary {
+  background: #f1f3f6;
+  color: #454d59;
+}
+
+.button-secondary:hover {
+  background: #e8ebf0;
+}
+
+.button-ghost:hover {
+  background: #f1f3f6;
+}
+
+.sample-text,
+.student-section h2,
+.student-section p {
+  margin: 8px 0 0;
+  color: #555d69;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.student-section h2 {
+  margin-top: 6px;
+}
+
+.student-section p {
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .demo-page {
+    padding-inline: 12px;
+  }
+
+  .button-row {
+    gap: 4px;
+  }
+
+  .button {
+    padding-inline: 12px;
+    font-size: 16px;
+  }
+
+  .sample-text,
+  .student-section h2,
+  .student-section p {
+    font-size: 25px;
+  }
+}
