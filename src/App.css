@@ -1,18 +1,89 @@
 .app-shell {
   min-height: 100vh;
-  background: #fff;
-}
-
-.top-bar {
-  height: 42px;
-  background: #4169e8;
-  box-shadow: 0 2px 6px rgb(22 44 108 / 14%);
+  padding: 36px 24px 64px;
+  background: #f5f7fb;
 }
 
 .demo-page {
-  width: min(100%, 1100px);
+  width: min(100%, 820px);
   margin: 0 auto;
-  padding: 12px 10px 40px;
+  overflow: hidden;
+  border: 1px solid #e6eaf0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 16px 48px rgb(26 39 61 / 8%);
+}
+
+.register-section {
+  padding: 32px 36px 30px;
+}
+
+.section-title {
+  margin: 0 0 22px;
+  color: #202a3a;
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+  color: #4b5565;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #dce2eb;
+  border-radius: 9px;
+  padding: 0 12px;
+  background: #fff;
+  color: #202a3a;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.form-field input::placeholder {
+  color: #98a1af;
+}
+
+.form-field input:focus {
+  border-color: #3478ed;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgb(52 120 237 / 15%);
+}
+
+.form-actions {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 14px;
+}
+
+.form-success {
+  color: #21804a;
+  font-size: 14px;
+}
+
+.top-bar {
+  height: 12px;
+  background: linear-gradient(90deg, #2877e8, #5196ff);
+}
+
+.demo-content {
+  padding: 32px 36px 40px;
 }
 
 .counter-section {
@@ -22,26 +93,27 @@
 }
 
 .counter-value {
-  margin: 0 0 10px;
-  color: #555d69;
+  margin: 0 0 14px;
+  color: #202a3a;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.04em;
   line-height: 1.25;
 }
 
 .button {
   display: inline-flex;
-  min-height: 48px;
+  min-height: 42px;
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 0 16px;
+  border-radius: 9px;
+  padding: 0 15px;
   background: transparent;
-  color: #535b68;
+  color: #4b5565;
   font: inherit;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -59,37 +131,47 @@
 }
 
 .button-primary {
-  min-height: 52px;
-  border-radius: 15px;
+  min-height: 46px;
+  border-radius: 10px;
   padding-inline: 20px;
-  background: #292d36;
+  background: #202a3a;
   color: #fff;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 15px;
 }
 
 .button-primary:hover {
-  background: #3a404c;
+  background: #34445c;
+}
+
+.button-register {
+  min-height: 44px;
+  padding-inline: 20px;
+  background: #2877e8;
+  color: #fff;
+}
+
+.button-register:hover {
+  background: #1d64c9;
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .button-destructive {
-  color: #e87983;
+  color: #cb5260;
 }
 
 .button-destructive:hover {
   background: #fff1f2;
-  color: #cf5965;
+  color: #b83d4b;
 }
 
 .button-outline {
-  border-color: #e5e8ed;
+  border-color: #e1e6ed;
   background: #fff;
   color: #4b5360;
 }
@@ -99,12 +181,12 @@
 }
 
 .button-secondary {
-  background: #f1f3f6;
+  background: #eef1f5;
   color: #454d59;
 }
 
 .button-secondary:hover {
-  background: #e8ebf0;
+  background: #e4e8ee;
 }
 
 .button-ghost:hover {
@@ -114,24 +196,49 @@
 .sample-text,
 .student-section h2,
 .student-section p {
-  margin: 8px 0 0;
-  color: #555d69;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.35;
+  margin: 0;
+  color: #303b4c;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.sample-text {
+  margin-top: 28px;
 }
 
 .student-section h2 {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .student-section p {
   margin-top: 8px;
+  color: #596577;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 16px 12px 32px;
+  }
+
   .demo-page {
-    padding-inline: 12px;
+    border-radius: 14px;
+  }
+
+  .register-section,
+  .demo-content {
+    padding: 24px 20px;
+  }
+
+  .register-form {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .form-actions {
+    margin-top: 2px;
   }
 
   .button-row {
@@ -140,12 +247,5 @@
 
   .button {
     padding-inline: 12px;
-    font-size: 16px;
-  }
-
-  .sample-text,
-  .student-section h2,
-  .student-section p {
-    font-size: 25px;
   }
 }
