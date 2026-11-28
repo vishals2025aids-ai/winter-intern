@@ -1,24 +1,41 @@
-import Count from './hooks/count.jsx'
-import Register from './hooks/counter.jsx'
-import './App.css'
 
-function App() {
-  return (
-    <div className="app-shell">
-      <main className="demo-page">
-        <Register />
-        <div className="top-bar" aria-hidden="true" />
-        <div className="demo-content">
-          <Count />
-          <p className="sample-text">This is test</p>
-          <section className="student-section" aria-labelledby="students-title">
-            <h2 id="students-title">Students</h2>
-            <p>I am user and age is 20</p>
-          </section>
-        </div>
-      </main>
-    </div>
-  )
+import { Routes, Route } from 'react-router-dom'
+
+import Navbar from './components/ui/Navbar'
+
+import Home from './pages/Home'
+import About from './pages/About'
+import Service from './pages/Service'
+import Contact from './pages/Contact'
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+
+const App = () => {
+
+    return (
+        <>
+            <Navbar />
+
+            <Routes>
+
+                <Route path="/" element={<Home />} />
+
+                <Route path="/about" element={<About />} />
+
+                <Route path="/service" element={<Service />} />
+
+                <Route path="/contact" element={<Contact />} />
+
+                <Route path="/products" element={<Products />} />
+
+                <Route
+                    path="/productDetails/:id"
+                    element={<ProductDetails />}
+                />
+
+            </Routes>
+        </>
+    )
 }
 
 export default App
